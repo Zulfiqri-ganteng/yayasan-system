@@ -1,0 +1,360 @@
+/* ======================================================
+   PENGUMUMAN – INTERNATIONAL EDITION
+====================================================== */
+
+.pengumuman-section {
+  padding: 90px 0;
+  background: #f8fafc;
+}
+
+/* ================= TITLE ================= */
+
+.pengumuman-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0f1f45;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+.pengumuman-title::after {
+  content: "";
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #d4af37, transparent);
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-radius: 2px;
+}
+
+/* ================= EMPTY STATE ================= */
+
+.pengumuman-empty {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* ================= CARD ================= */
+
+.pengumuman-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px;
+  margin-bottom: 28px;
+  box-shadow: 0 12px 35px rgba(15, 31, 69, 0.08);
+  transition: all 0.35s ease;
+  border: 1px solid rgba(15, 31, 69, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle gold accent line */
+.pengumuman-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #d4af37, #f1d37a);
+  opacity: 0.8;
+}
+
+.pengumuman-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(15, 31, 69, 0.15);
+}
+
+/* ================= CONTENT ================= */
+
+.pengumuman-card h5 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f1f45;
+  margin-bottom: 14px;
+}
+
+.pengumuman-card p {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* ================= FOOTER ================= */
+
+.pengumuman-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ================= BUTTON ================= */
+
+.btn-pengumuman {
+  background: linear-gradient(135deg, #0f1f45, #132c5c);
+  color: #ffffff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-pengumuman::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(135deg, #d4af37, #f1d37a);
+  transition: 0.3s ease;
+  z-index: 0;
+}
+
+.btn-pengumuman span {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-pengumuman:hover::after {
+  width: 100%;
+}
+
+.btn-pengumuman:hover {
+  color: #0f1f45;
+}
+
+/* ======================================================
+   RESPONSIVE – CLEAN MOBILE
+====================================================== */
+
+@media (max-width: 992px) {
+  .pengumuman-section {
+    padding: 70px 0;
+  }
+
+  .pengumuman-title {
+    font-size: 26px;
+    margin-bottom: 35px;
+  }
+
+  .pengumuman-card {
+    padding: 22px;
+  }
+
+  .pengumuman-card h5 {
+    font-size: 18px;
+  }
+
+  .pengumuman-card p {
+    font-size: 14px;
+  }
+
+  .btn-pengumuman {
+    width: 100%;
+    text-align: center;
+  }
+
+  .pengumuman-footer {
+    justify-content: center;
+  }
+}
+/* detailll */
+
+/* ======================================================
+   DETAIL PENGUMUMAN – PREMIUM EDITION
+====================================================== */
+
+.pengumuman-detail-section {
+  padding: 90px 0;
+  background: #f8fafc;
+}
+
+/* ================= HEADER AREA ================= */
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+/* Back button */
+
+.btn-kembali {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  color: #0f1f45;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-kembali:hover {
+  background: #0f1f45;
+  color: #ffffff;
+  border-color: #0f1f45;
+}
+
+/* Publish date */
+
+.detail-meta {
+  font-size: 13px;
+  color: #64748b;
+  letter-spacing: 0.3px;
+}
+
+/* ================= TITLE ================= */
+
+.detail-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0f1f45;
+  line-height: 1.25;
+  margin-bottom: 30px;
+  max-width: 900px;
+}
+
+/* subtle underline accent */
+
+.detail-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #d4af37, transparent);
+  margin-top: 14px;
+  border-radius: 3px;
+}
+
+/* ================= ATTACHMENT ================= */
+
+.detail-attachment {
+  margin-bottom: 35px;
+}
+
+.btn-attachment {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #0f1f45, #132c5c);
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(15, 31, 69, 0.25);
+}
+
+.btn-attachment i {
+  font-size: 14px;
+}
+
+.btn-attachment:hover {
+  background: linear-gradient(135deg, #d4af37, #f1d37a);
+  color: #0f1f45;
+}
+
+/* ================= CONTENT AREA ================= */
+
+.detail-content {
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(15, 31, 69, 0.08);
+  max-width: 900px;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #334155;
+}
+
+/* Typography inside content */
+
+.detail-content h1,
+.detail-content h2,
+.detail-content h3 {
+  color: #0f1f45;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.detail-content p {
+  margin-bottom: 18px;
+}
+
+.detail-content ul,
+.detail-content ol {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.detail-content a {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.detail-content a:hover {
+  text-decoration: underline;
+}
+
+/* Images inside content */
+
+.detail-content img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+/* ======================================================
+   RESPONSIVE – CLEAN MOBILE
+====================================================== */
+
+@media (max-width: 992px) {
+  .pengumuman-detail-section {
+    padding: 70px 0;
+  }
+
+  .detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .detail-title {
+    font-size: 26px;
+  }
+
+  .detail-content {
+    padding: 25px;
+    font-size: 15px;
+  }
+
+  .btn-attachment {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* =========================================
+   FIX OFFSET AFTER FIXED NAVBAR
+========================================= */
+
+body {
+  padding-top: 50px;
+}

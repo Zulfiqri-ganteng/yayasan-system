@@ -1,0 +1,399 @@
+:root {
+  --navy-bright: #132c5c;
+  --navy-deep: #0f1f45;
+  --navy-gradient: linear-gradient(135deg, #132c5c 0%, #0f1f45 50%, #1b3c78 100%);
+  --gold-main: #d4af37;
+  --gold-soft: #f1d37a;
+  --white-soft: #f8fafc;
+  --text-light: #e2e8f0;
+}
+
+/* ============================= */
+/* NAVBAR BASE */
+/* ============================= */
+
+.navbar-custom {
+  background: var(--navy-gradient);
+  padding: 18px 0;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+/* Animated subtle gradient */
+.navbar-custom {
+  background-size: 200% 200%;
+  animation: navyShift 8s ease infinite;
+}
+
+@keyframes navyShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.navbar-custom.scrolled {
+  padding: 14px 0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+}
+
+/* ============================= */
+/* BRAND */
+/* ============================= */
+
+.navbar-logo {
+  height: 46px;
+  margin-right: 14px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+.brand-title {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  text-transform: none;
+  color: #ffc400; /* classic gold premium */
+}
+
+.btn-ppdb i,
+.btn-login i {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.btn-ppdb:hover i,
+.btn-login:hover i {
+  transform: translateX(3px);
+}
+
+.brand-subtitle {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+}
+
+/* ============================= */
+/* NAV LINKS */
+/* ============================= */
+
+.navbar-custom .nav-link {
+  color: var(--white-soft);
+  font-weight: 500;
+  font-size: 15px;
+  margin: 0 10px;
+  padding: 6px 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.navbar-collapse {
+  justify-content: flex-end;
+}
+.nav-actions {
+  margin-left: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-custom .nav-link:hover {
+  color: var(--gold-soft);
+  transform: translateY(-2px);
+}
+
+/* elegant underline */
+.navbar-custom .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--gold-main);
+  transition: width 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover::after {
+  width: 70%;
+}
+
+/* ============================= */
+/* DROPDOWN */
+/* ============================= */
+
+.dropdown-custom {
+  border-radius: 14px;
+  border: none;
+  padding: 10px 0;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  animation: fadeDown 0.3s ease;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-custom .dropdown-item {
+  font-size: 14px;
+  padding: 10px 20px;
+  transition: all 0.25s ease;
+}
+
+.dropdown-custom .dropdown-item:hover {
+  background: #f9fafb;
+  color: var(--navy-bright);
+}
+
+/* ============================= */
+/* GOLD BUTTONS */
+/* ============================= */
+
+.btn-ppdb,
+.btn-login {
+  background: linear-gradient(135deg, #d4af37, #f1d37a);
+  color: #1a1a1a;
+  padding: 9px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+  transition: all 0.3s ease;
+  border: none;
+}
+.navbar-nav .dropdown > .nav-link {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.btn-ppdb:hover,
+.btn-login:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(212, 175, 55, 0.6);
+  color: #000000;
+}
+
+/* ============================= */
+/* TOGGLER */
+/* ============================= */
+
+.custom-toggler {
+  border: none;
+}
+
+.custom-toggler span {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: #ffffff;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 991px) {
+  .navbar-custom {
+    padding: 16px 0;
+  }
+
+  .navbar-custom .nav-link {
+    margin: 10px 0;
+  }
+
+  .nav-actions {
+    margin-top: 22px;
+  }
+
+  .btn-ppdb,
+  .btn-login {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-custom {
+    box-shadow: none;
+  }
+}
+/* ============================= */
+/* BUTTON CLICK ANIMATION */
+/* ============================= */
+
+.btn-ppdb,
+.btn-login {
+  position: relative;
+  overflow: hidden;
+}
+
+/* press effect */
+.btn-ppdb:active,
+.btn-login:active {
+  transform: scale(0.96);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.4);
+}
+
+/* shimmer sweep */
+.btn-ppdb::before,
+.btn-login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.2));
+  transform: skewX(-25deg);
+}
+
+.btn-ppdb:hover::before,
+.btn-login:hover::before {
+  animation: shimmer 0.9s ease;
+}
+
+@keyframes shimmer {
+  100% {
+    left: 125%;
+  }
+}
+/* ============================= */
+/* HAMBURGER MORPH */
+/* ============================= */
+
+/* ============================= */
+/* HAMBURGER ULTRA SMOOTH */
+/* ============================= */
+
+.custom-toggler {
+  border: none;
+  padding: 6px;
+}
+
+.custom-toggler span {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: #ffffff;
+  margin: 6px 0;
+  border-radius: 3px;
+  transition:
+    transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    opacity 0.25s ease;
+}
+
+/* Morph animation */
+.custom-toggler.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.custom-toggler.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.custom-toggler.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+#mainNavbar {
+  transition: height 0.35s ease-in-out;
+}
+
+/* ultra */
+.navbar-custom .container {
+  max-width: 1400px; /* lebih lebar */
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  max-width: 420px; /* batasi lebar brand */
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.brand-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 991px) {
+  .navbar-logo {
+    height: 38px;
+  }
+
+  .brand-title {
+    font-size: 14px;
+  }
+
+  .brand-subtitle {
+    font-size: 10px;
+  }
+
+  .navbar-brand {
+    max-width: 80%;
+  }
+
+  .custom-toggler {
+    margin-left: auto;
+  }
+  /* ============================= */
+  /* LANGUAGE SWITCHER PREMIUM */
+  /* ============================= */
+
+  .nav-language .lang-toggle {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+  }
+
+  .nav-language .lang-toggle:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--gold-main);
+    color: var(--gold-soft);
+  }
+
+  /* dropdown style */
+  .lang-dropdown {
+    border-radius: 12px;
+    padding: 8px 0;
+    min-width: 180px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+    border: none;
+  }
+
+  .lang-dropdown .dropdown-item {
+    font-size: 14px;
+    padding: 10px 18px;
+    transition: all 0.25s ease;
+  }
+
+  .lang-dropdown .dropdown-item:hover {
+    background: #f9fafb;
+    color: var(--navy-bright);
+  }
+}

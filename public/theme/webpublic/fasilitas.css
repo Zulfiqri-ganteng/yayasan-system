@@ -1,0 +1,37 @@
+.facility-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.facility-lightbox.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+.facility-lightbox-content {
+  background: #fff;
+  max-width: 700px;
+  width: 90%;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: zoomIn 0.3s ease;
+}
+
+.facility-lightbox-content img {
+  width: 100%;
+  height: auto;
+}
+
+.facility-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+}
