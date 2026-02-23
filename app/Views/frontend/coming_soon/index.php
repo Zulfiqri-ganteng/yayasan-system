@@ -25,7 +25,7 @@ echo view('frontend/partials/page_header', [
             </h2>
 
             <p class="coming-highlight">
-                Halaman ini sedang dalam tahap pengembangan.
+                Halaman ini sedang dalam tahap pengembangan coyyyy
             </p>
 
             <p class="coming-text">
