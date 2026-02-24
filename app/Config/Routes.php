@@ -587,56 +587,56 @@ $routes->get('akademik/(:segment)', 'Frontend\AkademikController::detail/$1');
 | FRONTEND SEKOLAH
 |--------------------------------------------------------------------------
 */
-$routes->group('(:segment)', function ($routes) {
+// $routes->group('(:segment)', function ($routes) {
 
-    $routes->get('/', 'Frontend\HomeController::index');
+//     $routes->get('/', 'Frontend\HomeController::index');
 
-    $routes->get('tentang', 'Frontend\TentangController::index');
+//     $routes->get('tentang', 'Frontend\TentangController::index');
 
-    $routes->get('berita', 'Frontend\BeritaController::index');
-    $routes->get('berita/(:segment)', 'Frontend\BeritaController::detail/$2');
+//     $routes->get('berita', 'Frontend\BeritaController::index');
+//     $routes->get('berita/(:segment)', 'Frontend\BeritaController::detail/$2');
 
-    $routes->get('pengumuman', 'Frontend\PengumumanController::index');
-    $routes->get('pengumuman/(:num)', 'Frontend\PengumumanController::detail/$2');
+//     $routes->get('pengumuman', 'Frontend\PengumumanController::index');
+//     $routes->get('pengumuman/(:num)', 'Frontend\PengumumanController::detail/$2');
 
-    $routes->get('galeri', 'Frontend\GaleriController::index');
-    $routes->get('kontak', 'Frontend\KontakController::index');
+//     $routes->get('galeri', 'Frontend\GaleriController::index');
+//     $routes->get('kontak', 'Frontend\KontakController::index');
 
-    $routes->get('kurikulum', 'Frontend\ComingSoonController::kurikulum');
-    $routes->get('kesiswaan/osis', 'Frontend\ComingSoonController::osis');
-    $routes->get('kesiswaan/prestasi', 'Frontend\ComingSoonController::prestasi');
-    // $routes->get('ekstrakurikuler', 'Frontend\EkskulController::index');
+//     $routes->get('kurikulum', 'Frontend\ComingSoonController::kurikulum');
+//     $routes->get('kesiswaan/osis', 'Frontend\ComingSoonController::osis');
+//     $routes->get('kesiswaan/prestasi', 'Frontend\ComingSoonController::prestasi');
+//     // $routes->get('ekstrakurikuler', 'Frontend\EkskulController::index');
 
-    // khusus SMK
-    /*
-    ================= PROGRAM UNGGULAN =================
-    */
+//     // khusus SMK
+//     /*
+//     ================= PROGRAM UNGGULAN =================
+//     */
 
-    $routes->get('program-unggulan', 'Frontend\ProgramUnggulanController::index');
+//     $routes->get('program-unggulan', 'Frontend\ProgramUnggulanController::index');
 
-    $routes->get('program-unggulan/jurusan', 'Frontend\JurusanController::index');
-    $routes->get('program-unggulan/jurusan/(:segment)', 'Frontend\JurusanController::detail/$2');
+//     $routes->get('program-unggulan/jurusan', 'Frontend\JurusanController::index');
+//     $routes->get('program-unggulan/jurusan/(:segment)', 'Frontend\JurusanController::detail/$2');
 
-    $routes->get('program-unggulan/pkl', 'Frontend\ComingSoonController::pkl');
-    $routes->get('program-unggulan/bkk', 'Frontend\ComingSoonController::bkk');
+//     $routes->get('program-unggulan/pkl', 'Frontend\ComingSoonController::pkl');
+//     $routes->get('program-unggulan/bkk', 'Frontend\ComingSoonController::bkk');
 
-    // SD / TK
-    $routes->get('kegiatan', 'Frontend\KegiatanController::index');
+//     // SD / TK
+//     $routes->get('kegiatan', 'Frontend\KegiatanController::index');
 
-    $routes->get('ppdb', 'Frontend\PpdbController::index'); // ✅ WAJIB
-    $routes->get('ppdb/daftar', 'Frontend\PpdbController::form');
-    $routes->post('ppdb/daftar', 'Frontend\PpdbController::submit');
+//     $routes->get('ppdb', 'Frontend\PpdbController::index'); // ✅ WAJIB
+//     $routes->get('ppdb/daftar', 'Frontend\PpdbController::form');
+//     $routes->post('ppdb/daftar', 'Frontend\PpdbController::submit');
 
 
-    // SMA
-    $routes->get('projek-p5', 'Frontend\ComingSoonController::projekP5');
-    $routes->get('jadwal-pelajaran', 'Frontend\ComingSoonController::jadwalPelajaran');
+//     // SMA
+//     $routes->get('projek-p5', 'Frontend\ComingSoonController::projekP5');
+//     $routes->get('jadwal-pelajaran', 'Frontend\ComingSoonController::jadwalPelajaran');
 
-    // ================= KESISWAAN =================
-    $routes->get('kesiswaan', 'Frontend\KesiswaanController::index');
+//     // ================= KESISWAAN =================
+//     $routes->get('kesiswaan', 'Frontend\KesiswaanController::index');
 
-    $routes->get('kesiswaan/ekstrakurikuler', 'Frontend\EkstrakurikulerController::index');
-    $routes->get('kesiswaan/ekstrakurikuler/(:segment)', 'Frontend\EkstrakurikulerController::detail/$2');
+//     $routes->get('kesiswaan/ekstrakurikuler', 'Frontend\EkstrakurikulerController::index');
+//     $routes->get('kesiswaan/ekstrakurikuler/(:segment)', 'Frontend\EkstrakurikulerController::detail/$2');
 
-    $routes->get('kesiswaan/osis', 'Frontend\ComingSoonController::osis');
-});
+//     $routes->get('kesiswaan/osis', 'Frontend\ComingSoonController::osis');
+// });
