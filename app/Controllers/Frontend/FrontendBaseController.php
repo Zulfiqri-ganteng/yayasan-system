@@ -84,7 +84,36 @@ class FrontendBaseController extends BaseController
 
         // Daftar jenjang resmi
         $listJenjang = ['smk', 'sma', 'smp', 'sd', 'tk'];
+        /**
+         * 3️⃣ JIKA SEKOLAH TERDETEKSI
+         */
+        if ($jenjang) {
+            $sekolahModel = new SekolahModel();
+            $sekolah = $sekolahModel
+                ->where('jenjang', $jenjang)
+                ->where('status', 1)
+                ->first();
 
+            if ($sekolah) {
+                $this->context = [
+                    'type'       => 'sekolah',
+                    'sekolah_id' => (int) $sekolah['id'],
+                    'sekolah'    => $sekolah,
+                    'jenjang'    => $jenjang,
+                ];
+            } else {
+                throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+            }
+        }
+
+        /**
+         * 🔒 GUARD: Cegah Subdomain Sekolah Mengakses Mode Yayasan
+         */
+        $isSubdomain = preg_match('/^(smk|sma|smp|sd|tk)\./', $host);
+
+        if ($isSubdomain && $this->context['type'] !== 'sekolah') {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
         // SUBDOMAIN MODE (smk.domain.com)
         if (preg_match('/^(smk|sma|smp|sd|tk)\./', $host, $match)) {
             $jenjang = $match[1];
@@ -171,14 +200,19 @@ class FrontendBaseController extends BaseController
      * CONTEXT-AWARE URL HELPER
      * ==================================================
      */
+    // protected function ctxUrl(string $path = ''): string
+    // {
+    //     $path = ltrim($path, '/');
+
+    //     if ($this->context['type'] === 'sekolah' && $this->context['jenjang']) {
+    //         return base_url($this->context['jenjang'] . '/' . $path);
+    //     }
+
+    //     return base_url($path);
+    // }
     protected function ctxUrl(string $path = ''): string
     {
         $path = ltrim($path, '/');
-
-        if ($this->context['type'] === 'sekolah' && $this->context['jenjang']) {
-            return base_url($this->context['jenjang'] . '/' . $path);
-        }
-
         return base_url($path);
     }
 }
